@@ -120,8 +120,25 @@ update();
 
 
 var button = document.querySelector('.menu-icon');
-button.addEventListener('click', function (){
-  button.classList.toggle('open');
+
+$('.menu-icon').click(function(){
+  if($(this).attr('class').indexOf('open')==-1)
+  {
+    $('.sidebar').addClass('active');
+    $(this).addClass("open");
+  }
+    else{
+     $('.sidebar').removeClass('active');
+     $(this).removeClass("open");} 
+
+  
+
+});
+// button.addEventListener('click', function (){
+//   button.classList.toggle('open');
+//   document.getElementByClassName('sidebar').
    
     
-});
+// });
+
+
