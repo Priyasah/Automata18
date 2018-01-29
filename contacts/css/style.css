@@ -1,0 +1,349 @@
+body {
+  margin: 50px 0px;
+  font-family: Montserrat;
+  font-size: 1rem;
+  line-height: 1.25rem;
+background-color: #00002b;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+}
+
+.wrapper {
+  max-width: 780px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  color: white;
+  background-color: white;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 35px 80px 7px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 35px 80px 7px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  min-width: 220px;
+  min-height: 220px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container--facebook {
+  background-color: #37508D;
+}
+
+.container--twitter {
+  background-color: #00A5EA;
+}
+
+.container--instagram {
+  background-color: #195484;
+}
+
+.ion {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.ion.ion-social-facebook {
+  color: #37508D;
+}
+
+.ion.ion-social-twitter {
+  color: #00A5EA;
+}
+
+.ion.ion-social-instagram {
+  color: #195484;
+}
+
+.box {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: white;
+  -webkit-box-shadow: 0 20px 60px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 20px 60px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  color: white;
+  font-size: 2.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: transform-3d;
+          transform-style: transform-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  height: 220px;
+  width: 220px;
+}
+.box > * {
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: transform-3d;
+          transform-style: transform-3d;
+}
+
+.box--left {
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+}
+
+.box--middle {
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.box--right {
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container:hover .box--left, .active .box--left {
+  -webkit-transform: translate(-40px, -40px) rotate(-90deg) rotateY(180deg);
+          transform: translate(-40px, -40px) rotate(-90deg) rotateY(180deg);
+}
+.container:hover .box--left .ion, .active .box--left .ion {
+  -webkit-transform: rotate(270deg) rotateY(180deg) translate(-122%, -4%);
+          transform: rotate(270deg) rotateY(180deg) translate(-122%, -4%);
+}
+.container:hover .box--left .count, .active .box--left .count {
+  -webkit-transform: rotate(270deg) rotateY(180deg) translate(-200%, 200%);
+          transform: rotate(270deg) rotateY(180deg) translate(-200%, 200%);
+}
+.container:hover .box--middle, .active .box--middle {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+.container:hover .box--right, .active .box--right {
+  -webkit-transform: translate(40px, -40px);
+          transform: translate(40px, -40px);
+}
+
+.count {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  display: block;
+  font-weight: 400;
+  text-center: center;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.follow {
+  bottom: 0;
+  color: white;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: absolute;
+}
+
+.follow--left {
+  right: 0;
+  -webkit-transform: translate(-14px, -10px);
+          transform: translate(-14px, -10px);
+}
+
+.follow--middle {
+  left: 50%;
+  -webkit-transform: translate(-50%, -10px);
+          transform: translate(-50%, -10px);
+}
+
+.follow--right {
+  left: 0;
+  -webkit-transform: translate(14px, -10px);
+          transform: translate(14px, -10px);
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  color: #555;
+  cursor: pointer;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-size: 0.875rem;
+  outline: 0;
+  padding: 10px 30px;
+  position: relative;
+  text-align: center;
+  display: block;
+  -webkit-transition: background-color 0.15s, -webkit-box-shadow 0.15s;
+  transition: background-color 0.15s, -webkit-box-shadow 0.15s;
+  transition: box-shadow 0.15s, background-color 0.15s;
+  transition: box-shadow 0.15s, background-color 0.15s, -webkit-box-shadow 0.15s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+}
+.button:active {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+
+.sidebar
+{
+     position: fixed;
+
+  top:0;
+  left: -250px;
+  background:#262626;
+  width:250px;
+  transition: .3s;
+  height:100%;
+
+}
+.active{
+  left:0;
+
+}
+
+ul{
+  margin:0;
+  padding: 150px 10px;
+
+}
+
+ul li{
+  list-style: none;
+  padding: 2px 2px 2px 2px;
+
+
+}
+ul li a{
+  padding: 10px 20px;
+  color:#fff;
+  display:block;
+  font-size: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+
+
+}
+
+
+
+
+/*
+  menu icon css3
+*/
+
+.menu-icon {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: block;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  /* to center */
+  margin: 0 auto;
+  float: none;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+
+.menu-icon > span {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 0.5em;
+  margin-top: -0.5em;
+  background-color: #e74c3c;
+  border-radius: 3px;
+}
+
+.menu-icon > span:before,
+.menu-icon > span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e74c3c;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+
+.menu-icon > span:before {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+.menu-icon > span:after {
+  -webkit-transform: translateY(1em);
+          transform: translateY(1em);
+}
+
+/* OPENED */
+
+.menu-icon.open {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-icon.open > span:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.menu-icon.open > span:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
