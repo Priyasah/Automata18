@@ -3,6 +3,16 @@ margin:0;
 padding:0;
 background-color: #00002b;
 }
+
+
+
+
+
+
+
+
+
+
 .sidebar
 {
      position: absolute;
@@ -386,4 +396,11 @@ img{
 .menu-icon.open > span:after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.register{
+  position: absolute;
+  top: 50px;
+  left:1500px;
+  text-align: center;
 }
